@@ -132,6 +132,11 @@ void bitarray::proxy::operator =(unsigned char bit)
     *targetbit = (*targetbit & ~(0x1 << (idx_ % 8))) | bmask;
 }
 
+bitarray::proxy::operator unsigned char()
+{
+    return get();
+}
+
 std::ostream& operator <<(std::ostream& os, bitarray::proxy& p)
 {
     os << p.get();

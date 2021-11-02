@@ -48,6 +48,7 @@ public:
         bool get();
 
         void operator =(unsigned char bit);
+        operator unsigned char();
 
         friend std::ostream& operator <<(std::ostream& os, proxy& p);
     };
